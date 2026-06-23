@@ -1,6 +1,8 @@
-# Facerix App Template
+<div style="text-align: center"><img src="images/splash.png" alt="Hololith logo" /></div>
 
-Progressive Web App (PWA) template for building offline-first web applications. Built with vanilla TypeScript, Web Components, and Service Workers — compiled with `tsc`, no bundler.
+# Hololith
+
+Hololith is a low-resolution, top-down tactical wargame simulator — a 40k-adjacent system that uses army roster data from `personnel` as its source material without leaning on GW-protected naming.
 
 ## Architecture
 
@@ -48,46 +50,3 @@ Service workers (`sw.js`, `sw-dev.js`, `sw-core.js`) are **not** compiled by `ts
 - **const > let** - Prefer `const`, avoid `var`
 - **Arrow functions** - For callbacks
 - **async/await** - For promises
-
-## Project Structure
-
-```
-/
-├── index.html/.ts             # Main entry point
-├── about.html/.ts             # About page
-├── main.css                   # Global styles
-├── manifest.json              # PWA manifest
-├── sw.js                      # Production service worker (hand-authored JS)
-├── sw-dev.js                  # Development service worker (hand-authored JS)
-├── sw-core.js                 # Shared service worker logic (hand-authored JS)
-├── tsconfig.json              # tsc config for src/components/entries
-├── tsconfig.tests.json        # type-check-only config for tests
-├── components/                # Web Components (Custom Elements)
-│   ├── ConfirmationModal.ts
-│   └── UpdateNotification.ts
-├── src/                       # Core utilities
-│   ├── DataStore.ts           # Singleton data store (localStorage)
-│   ├── ServiceWorkerManager.ts # Service worker lifecycle
-│   ├── domUtils.ts            # DOM helper functions (h() function)
-│   ├── uuid.ts                # Thin wrapper over crypto.randomUUID()
-│   └── globals.d.ts           # Ambient types for window-scoped state + custom events
-├── scripts/
-│   └── copy-assets.mjs        # Copies static files into dist/
-├── tests/                     # node --test suites (TypeScript)
-├── images/                    # SVG/PNG assets
-├── icons/                     # PWA icons (referenced from manifest.json)
-├── favicon.svg                # Browser favicon (scalable)
-├── favicon.ico                # Legacy favicon
-├── favicon-96x96.png          # 96×96 favicon
-└── apple-touch-icon.png       # 180×180 iOS home-screen icon
-```
-
-(`dist/` is git-ignored; created by `pnpm build` or `pnpm dev`.)
-
-## Getting Started
-
-See [USING_THIS_TEMPLATE.md](USING_THIS_TEMPLATE.md) for the full step-by-step setup guide.
-
-## Credits
-
-Template created by [Rylee Corradini](https://www.facerix.com/about).

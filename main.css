@@ -99,8 +99,8 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
-  font-variant: common-ligatures small-caps;
+  font-family: Dynamo, 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  font-variant: common-ligatures;
 }
 
 #main-head > * {
