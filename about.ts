@@ -1,4 +1,5 @@
 import { serviceWorkerManager } from '/src/ServiceWorkerManager.js';
+import '/components/ThemeToggle.js';
 import '/components/UpdateNotification.js';
 import '/components/ConfirmationModal.js';
 

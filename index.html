@@ -2,15 +2,15 @@
 
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>App Name</title>
+    <title>Hololith</title>
     <meta charset="utf-8" />
-    <meta name="description" content="A simple web app" />
+    <meta name="description" content="Low-resolution top-down tactical wargame simulator" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="canonical" href="https://example.facerix.com/" />
-    <meta property="og:title" content="App Name" />
-    <meta property="og:description" content="A simple web app" />
-    <meta property="og:url" content="https://example.facerix.com/" />
+    <meta name="theme-color" content="#1b2e1b" />
+    <link rel="canonical" href="https://hololith.facerix.com/" />
+    <meta property="og:title" content="Hololith" />
+    <meta property="og:description" content="Low-resolution top-down tactical wargame simulator" />
+    <meta property="og:url" content="https://hololith.facerix.com/" />
     <meta property="og:type" content="website" />
     <meta http-equiv="Content-Language" content="en" />
 
@@ -21,15 +21,22 @@
     <link rel="stylesheet" href="/main.css" type="text/css" charset="utf-8" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="modulepreload" href="/index.js" />
+    <script>
+      (function () {
+        const t = localStorage.getItem('hololith-theme');
+        if (t) document.documentElement.dataset.theme = t;
+      })();
+    </script>
   </head>
 
   <body class="u-fill-height">
-    <header>
-      <img src="/favicon.svg" alt="App logo" />
-      <h1>App Name</h1>
+    <header id="main-head">
+      <img src="/favicon.svg" alt="Hololith logo" />
+      <h1>Hololith</h1>
+      <theme-toggle></theme-toggle>
     </header>
     <main class="u-center">
-      <h3>Welcome to your new app</h3>
+      <h3>Under construction</h3>
     </main>
 
     <footer id="main-foot">A&nbsp;<a href="/about.html">Facerix</a>&nbsp;creation</footer>

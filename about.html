@@ -2,15 +2,15 @@
 
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>About - App Name</title>
+    <title>About - Hololith</title>
     <meta charset="utf-8" />
-    <meta name="description" content="About this app" />
+    <meta name="description" content="About Hololith" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="canonical" href="https://example.facerix.com/" />
-    <meta property="og:title" content="App Name" />
-    <meta property="og:description" content="About this app" />
-    <meta property="og:url" content="https://example.facerix.com/" />
+    <meta name="theme-color" content="#1b2e1b" />
+    <link rel="canonical" href="https://hololith.facerix.com/" />
+    <meta property="og:title" content="Hololith" />
+    <meta property="og:description" content="Low-resolution top-down tactical wargame simulator" />
+    <meta property="og:url" content="https://hololith.facerix.com/" />
     <meta property="og:type" content="website" />
 
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
@@ -19,6 +19,12 @@
 
     <link rel="stylesheet" href="/main.css" type="text/css" charset="utf-8" />
     <link rel="manifest" href="/manifest.json" />
+    <script>
+      (function () {
+        const t = localStorage.getItem('hololith-theme');
+        if (t) document.documentElement.dataset.theme = t;
+      })();
+    </script>
 
     <style>
       header {
@@ -43,10 +49,10 @@
         margin: 2em auto 0;
         width: 600px;
         padding: 1em;
-        border: 1px solid #ccc;
+        border: 1px solid var(--accent-color);
         border-radius: 5px;
-        background-color: #303030;
-        color: #f0f0f0;
+        background-color: var(--bg-color);
+        color: var(--text-color);
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
         font-size: 0.875rem;
         line-height: 1.5;
@@ -57,7 +63,7 @@
           display: block;
           margin-bottom: 0.5em;
           padding: 0.5em;
-          border-bottom: 1px dashed #ccc;
+          border-bottom: 1px dashed var(--accent-color);
           text-align: center;
         }
 
@@ -74,8 +80,8 @@
         button {
           margin-left: 1em;
           cursor: pointer;
-          background-color: #f0f0f0;
-          color: #303030;
+          background-color: var(--text-color);
+          color: var(--bg-color);
           border: none;
           padding: 0.5em 1em;
           border-radius: 5px;
@@ -111,18 +117,37 @@
   </head>
 
   <body class="fill-height">
-    <header>
+    <header id="main-head">
       <a href="/">
-        <img src="/favicon.svg" alt="App logo" />
+        <img src="/favicon.svg" alt="Hololith logo" />
       </a>
-      <h1>About App Name</h1>
+      <h1>About Hololith</h1>
+      <theme-toggle></theme-toggle>
     </header>
     <main>
       <p>
-        This app was built using standard web technologies by
-        <a href="https://www.facerix.com/about">Rylee Corradini</a>. It's a Progressive Web App,
-        meaning you can install it directly to your tablet/phone screen/desktop like a regular app,
+        Hololith is a stripped-down rendition of a popular Grimdark Future tabletop wargame,
+        allowing you to test-drive army compositions, opponent counters, and more.
+      </p>
+      <p>
+        Built using standard web technologies as a Progressive Web App,
+        it can be installed directly to your tablet/phone screen/desktop like a regular app,
         and it will behave more or less the same as one, and save its data in your device storage.
+      </p>
+
+      <h3>Credits:</h3>
+      <p>
+        Code by <a href="https://www.facerix.com/about">Rylee Corradini</a>,
+        with the assistance of a small army of LLM coding tools. Most art assets are from <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>;
+        placeholder animations were generated using
+        <a href="https://www.svgbackgrounds.com/elements/animated-svg-preloaders" target="_blank">SVGBackgrounds.com</a>.
+        Some 40k icons are from
+        <a href="https://github.com/Warhammer40kGroup/wh40k-icon" target="_blank">Warhammer40kGroup</a>;
+        the faction icons are from
+        <a href="https://github.com/Certseeds/wh40k-icon" target="_blank">Certseeds</a>.
+        Additional 40k-flavor icons are from
+        <a href="https://github.com/Locequen/40k-Data-Card" target="_blank">Locequen</a>.
+        Most were tweaked by me, because SVG is rad that way.
       </p>
 
       <details>
