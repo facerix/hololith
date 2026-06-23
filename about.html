@@ -42,7 +42,7 @@
 
       main {
         flex-direction: column;
-        padding: 3em 15vw;
+        padding: 3em 15dvw;
 
         line-height: 1.75rem;
         text-align: justify;
@@ -51,11 +51,14 @@
       .logo {
         position: relative;
         text-align: center;
+        background-color: #131f13;
+        overflow: clip;
 
         .logo-backdrop {
           position: absolute;
           height: 200px;
-          width: 100%;
+          width: stretch;
+          margin: 0 20dvw;
 
           background-image: linear-gradient(to right, rgba(0, 255, 212, 0.3) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 255, 212, 0.3) 1px, transparent 1px);
           background-size: 10px 5px;
@@ -148,7 +151,7 @@
   <body class="fill-height">
     <header id="main-head">
       <a href="/">
-        <img src="/favicon.svg" alt="Hololith logo" />
+        <img src="/images/back.svg" alt="back arrow" />
       </a>
       <h1>About Hololith</h1>
       <theme-toggle></theme-toggle>

@@ -92,6 +92,8 @@ header#main-head {
 
   h1 {
     font-family: Dynamo, 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+    color: #a1f051;
+    text-shadow: -1px -1px 1px #47b948, 1px 1px 1px limegreen;
   }
 }
 
