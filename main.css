@@ -17,6 +17,8 @@
   --bg-color: #0f1a0f;
   --main-bg-color: #131f13;
   --text-color: #c8e8b0;
+  --shadow-color-1: #47b948;
+  --shadow-color-2: #32cd32;
 }
 
 @media (prefers-color-scheme: light) {
@@ -25,6 +27,8 @@
     --bg-color: #f0f8e8;
     --main-bg-color: #e8f5e0;
     --text-color: #1a2e1a;
+    --shadow-color-1: #32cd32;
+    --shadow-color-2: #1a2e1a;
   }
 }
 
@@ -33,6 +37,8 @@
   --bg-color: #f0f8e8;
   --main-bg-color: #e8f5e0;
   --text-color: #1a2e1a;
+  --shadow-color-1: #32cd32;
+  --shadow-color-2: #1a2e1a;
 }
 
 [data-theme='dark'] {
@@ -40,6 +46,8 @@
   --bg-color: #0f1a0f;
   --main-bg-color: #131f13;
   --text-color: #c8e8b0;
+  --shadow-color-1: #47b948;
+  --shadow-color-2: #32cd32;
 }
 
 html {
@@ -92,8 +100,8 @@ header#main-head {
 
   h1 {
     font-family: Dynamo, 'Arial Black', 'Arial Bold', Gadget, sans-serif;
-    color: #a1f051;
-    text-shadow: -1px -1px 1px #47b948, 1px 1px 1px limegreen;
+    color: var(--accent-color);
+    text-shadow: -1px -1px 1px var(--shadow-color-1), 1px 1px 1px var(--shadow-color-2);
   }
 }
 
@@ -288,12 +296,12 @@ dialog::backdrop {
 /* web component placeholders */
 update-notification {
   display: none;
-  --update-notification-bg: linear-gradient(135deg, #7a7a7a 0%, #3a3a3a 50%, #5a5a5a 100%);
+  --update-notification-bg: #0f1a0f;
   --update-notification-color: white;
-  --update-notification-border: transparent;
+  --update-notification-border: #a1f051;
   --update-notification-btn-bg: white;
-  --update-notification-btn-color: #5a5a5a;
-  --update-notification-btn-hover: #f0f0f0;
+  --update-notification-btn-color: #5a9a5a;
+  --update-notification-btn-hover: #f0fff0;
 }
 
 /* view transitions */

@@ -26,6 +26,9 @@ const CacheConfig = {
       '/about.js',
       '/main.css',
       '/manifest.json',
+      '/components/ConfirmationModal.js',
+      '/components/ThemeToggle.js',
+      '/components/UpdateNotification.js',
     ];
   },
   
